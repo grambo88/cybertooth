@@ -1,5 +1,5 @@
 
 
-MindYa = "605048467"
+MindYa = "000000000"
 
-Business = "6631"
+Business = "0000"
