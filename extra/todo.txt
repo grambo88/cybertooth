@@ -1,0 +1,19 @@
+- write auto updater
+
+- collect season data so far
+ a. should be formatted: 
+
+1x8 
+['DATE','TRACK','RACE_NUM','RACE_DIST','RACE_PURSE','POST_TIME','ENTRIES','FIRST_PLACE']
+
+or
+
+1x7
+['DATE','TRACK','RACE_NUM','RACE_DIST','RACE_PURSE','POST_TIME','FIRST_PLACE']
+['HORSE_1']
+
+        iframe = self.driver.find_element_by_xpath('//*[@id="ticket"]')
+        
+        self.driver.switch_to.frame(iframe)
+
+
