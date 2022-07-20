@@ -46,19 +46,21 @@ class Webdriver:
         sleep(1)
         # WebDriverWait(self.driver, 20).until(EC.frame_to_be_available_and_switch_to_it((By.CSS_SELECTOR,"iframeCssSelector")))
 
-    def master(self):
+    def master(self): # 'join' is not defined
 
         filename = 'extra/Belmont-Dates-2022.csv'
         with open(filename, 'r') as csvfile:
             datareader = csv.reader(csvfile)
             for row in datareader:
                 print(row)
-                # row = row.text
-                # str(row)
-                row1 = join(row)
                 url_base = "https://entries.horseracingnation.com/entries-results/belmont-park/"
-                url = url_base + row1
-                self.driver.get(url)
+                # url = ' '.join(url_base, row)
+                url_date = ' '.join(row)
+                print(url_base + url_date)
+                url_full = url_base + url_date
+                self.driver.get(url_full)
+                sleep(5)
+                self.table_scrape()
                 sleep(5)
                 print('got to here')
 
